@@ -2,4 +2,4 @@
 APIdemo
 
 
-this is a FrontEnd call REST api only and show in map with long list
+this is a FrontEnd program call REST api  and show in the map with long list
