@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TATTLE DEMO</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+      
+      
+      
+      <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+     </style>
+  </head>
+    
+  <body>
+      
+      
+    
+      
+      
+      <div class="container" >
+        <h2>Login</h2>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    Username:<input type ="text" id ="txtEmail" />
+                    </br>
+                    </br>
+      
+                    Password :<input type = "password" id="txtPassword"/>
+                    </br>
+                    </br>
+      
+                    <input id="btn" type="button" value ="sumbit" />
+            
+            
+                </div>
+            </div>
+      </div>
+
+      <div id="map"></div>
+      <br>
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+      <br>
+
+ 
+      <ul id="orders"></ul>
+
+          <!-- in case older than IE 8, use script with type="text/template" instead of template -->
+          <template id="order-template">
+            <li data-id='{{id}}'><tag1>
+              <p>
+                <strong>Name:</strong>
+                <span class="noedit name">{{name}}</span>
+                <input class="edit name"/>
+              </p>
+              <p1>
+                <strong>Id:</strong>
+                <span class="noedit Id">{{id}}</span>
+                
+              </p1>
+              <p3>
+                <strong>Type:</strong>
+                <span class="noedit type">{{type}}</span>
+              </p3>
+              <button data-id='{{id}}' class='remove'>x</button>
+              <button class='editOrder noedit'>Edit</button>
+              <button class='saveEdit edit'>Save</button>
+              <button class='cancelEdit edit'>Cancel</button>
+            </tag1>
+            </li>
+          </template>
+    
+
+    
+    
+      
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="filter.js"></script>
+    <script src="map.js"></script>
+    <script src="index.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCv0ksI_JT8_dJVUqHEdrNdygKgxtG8qbE&callback=initMap">
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js" integrity="sha256-Mli7YfW2nzMHbdDJHhPd0sf+dxiCrf+TRekNSrfDJCY=" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
